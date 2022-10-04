@@ -3,6 +3,7 @@ package com.webservice.mongo.web.service.mongo.domain.dto;
 import com.webservice.mongo.web.service.mongo.domain.User;
 
 import java.io.Serializable;
+import java.util.Optional;
 
 public class UserDTO implements Serializable {
     private String id;
@@ -17,6 +18,9 @@ public class UserDTO implements Serializable {
         id = obj.getId();
         name = obj.getName();
         email = obj.getEmail();
+    }
+
+    public UserDTO(Optional<User> userId) {
     }
 
     public String getId() {
